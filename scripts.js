@@ -33,6 +33,8 @@ function newTask() {
 }
 
 function showValues(){
+    // JSON.parse é usado para analisar (converter de uma string JSON para um objeto JavaScript) os dados obtidos do localStorage.
+    // Se não houver dados no localStorage, um array vazio [] será usado como valor padrão.
     let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]")
     let list = document.getElementById('to-do-list')
     list.innerHTML = ''
